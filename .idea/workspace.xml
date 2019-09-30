@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4aae51f8-725f-4999-bd51-2b30a07c8e23" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/symfony/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Model/Car.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <folding>
+                <element signature="e#36#75#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>$environment</find>
+      <find>Repo</find>
+      <find>entity</find>
+      <find>dbal</find>
+      <find>mappings:</find>
+      <find>doctrine:</find>
+      <find>dropdown-toggle</find>
+      <find>getById</find>
+      <find>$requestStackContext</find>
+      <find>getPublicPath</find>
+      <find>Filesystem</find>
+      <find>$request</find>
+      <find>UserSelectTextType</find>
+      <find>row</find>
+      <find>TextareaType</find>
+      <find>new Ca</find>
+      <find>guessExtension</find>
+      <find>record</find>
+    </findStrings>
+    <dirStrings>
+      <dir>C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony</dir>
+      <dir>C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\config</dir>
+      <dir>C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\src</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/symfony/config/packages/prod/doctrine.yaml" />
+        <option value="$PROJECT_DIR$/symfony/config/routes/annotations.yaml" />
+        <option value="$PROJECT_DIR$/symfony/config/packages/doctrine_migrations.yaml" />
+        <option value="$PROJECT_DIR$/symfony/public/index.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Kernel.php" />
+        <option value="$PROJECT_DIR$/../song/db/database.sql" />
+        <option value="$PROJECT_DIR$/symfony/config/packages/doctrine.yaml" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Entity/Car.orm.yml" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Entity/Car.orm.xml" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Controller/LuckyController.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Application/UseCases/Car/ListAllCarsEnabled.php" />
+        <option value="$PROJECT_DIR$/symfony/templates/car/carsTable.html.twig" />
+        <option value="$PROJECT_DIR$/symfony/src/Application/UseCases/Car/GetCarInfo.php" />
+        <option value="$PROJECT_DIR$/symfony/templates/car/show.html.twig" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Criteria/Criteria.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Controller/CarController.php" />
+        <option value="$PROJECT_DIR$/symfony/public/js/filter_cars.js" />
+        <option value="$PROJECT_DIR$/symfony/src/Application/UseCases/Car/ListCarsFiltered.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Application/UseCases/Car/ListAllCars.php" />
+        <option value="$PROJECT_DIR$/symfony/templates/car/list.html.twig" />
+        <option value="$PROJECT_DIR$/../cars/symfony/templates/car_admin/list.html.twig" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Model/CarRepositoryInterface.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Repository/CarRepository.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Photo/PhotoManager.php" />
+        <option value="$PROJECT_DIR$/symfony/.env" />
+        <option value="$PROJECT_DIR$/symfony/config/services.yaml" />
+        <option value="$PROJECT_DIR$/symfony/templates/car_admin/_form.html.twig" />
+        <option value="$PROJECT_DIR$/symfony/templates/car_admin/new.html.twig" />
+        <option value="$PROJECT_DIR$/symfony/config/packages/twig.yaml" />
+        <option value="$PROJECT_DIR$/symfony/src/Application/UseCases/Car/CitySelect.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Service/UploaderHelper.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Controller/CarAdminController.php" />
+        <option value="$PROJECT_DIR$/symfony/templates/car_admin/list.html.twig" />
+        <option value="$PROJECT_DIR$/symfony/templates/car_admin/edit.html.twig" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Form/CarFormType.php" />
+        <option value="$PROJECT_DIR$/symfony/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Event/ProductWasCreatedEvent.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Aggregate/AggregateRoot.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Event/DomainEvent.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Application/UseCases/Car/InsertCar.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Event/CarCreated.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Event/DomainEventPublisher.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Infrastructure/Event/SymfonyDomainEventPublisher.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Application/UseCases/Car/DeleteCar.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Application/UseCases/Car/UpdateCar.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Event/CarUpdated.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Event/CarDeleted.php" />
+        <option value="$PROJECT_DIR$/symfony/src/Domain/Model/Car.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/twig-bridge" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/twig-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/cache" />
+      <path value="$PROJECT_DIR$/symfony/vendor/easycorp/easy-log-handler" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/framework-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/debug-pack" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/monolog-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/cache-contracts" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/flex" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/debug-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/symfony/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/profiler-pack" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/dependency-injection" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/web-profiler-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/symfony/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/symfony/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/var-exporter" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/symfony/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/monolog-bridge" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/config" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/dotenv" />
+      <path value="$PROJECT_DIR$/symfony/vendor/composer" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/options-resolver" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/intl" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/property-access" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/form" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/polyfill-intl-icu" />
+      <path value="$PROJECT_DIR$/symfony/vendor/zendframework/zend-eventmanager" />
+      <path value="$PROJECT_DIR$/symfony/vendor/ocramius/proxy-manager" />
+      <path value="$PROJECT_DIR$/symfony/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/symfony/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/doctrine-migrations-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/migrations" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/doctrine-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/reflection" />
+      <path value="$PROJECT_DIR$/symfony/vendor/jdorn/sql-formatter" />
+      <path value="$PROJECT_DIR$/symfony/vendor/doctrine/doctrine-cache-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/orm-pack" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/asset" />
+      <path value="$PROJECT_DIR$/symfony/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/symfony/vendor/symfony/maker-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/sensio/framework-extra-bundle" />
+      <path value="$PROJECT_DIR$/symfony/vendor/ramsey/uuid" />
+    </include_path>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/cars-hex.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/php.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cars-hex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cars-hex" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cars-hex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cars-hex" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cars-hex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cars-hex" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cars-hex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cars-hex" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cars-hex" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cars-hex" type="462c0819:PsiDirectoryNode" />
+              <item name="symfony" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
+              <item name="log" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/symfony/src/Domain/Event" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\src\Domain\Event" />
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\public\uploads\car_image" />
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\templates\car_admin" />
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\public\js" />
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\src\Infrastructure" />
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\src\Application\UseCases" />
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\src\Domain" />
+      <recent name="C:\Users\dresh\Desktop\GitProjects\cars-hex\symfony\src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4aae51f8-725f-4999-bd51-2b30a07c8e23" name="Default Changelist" comment="" />
+      <created>1565043311674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565043311674</updated>
+      <workItem from="1565043313797" duration="3397000" />
+      <workItem from="1565047814283" duration="3598000" />
+      <workItem from="1565093764818" duration="2149000" />
+      <workItem from="1565100722665" duration="1602000" />
+      <workItem from="1565120698562" duration="1577000" />
+      <workItem from="1565126431598" duration="2296000" />
+      <workItem from="1565167916288" duration="1800000" />
+      <workItem from="1565171776343" duration="596000" />
+      <workItem from="1565181419847" duration="3563000" />
+      <workItem from="1565208570069" duration="7977000" />
+      <workItem from="1565268333053" duration="3814000" />
+      <workItem from="1565297547781" duration="9526000" />
+      <workItem from="1565349320424" duration="4704000" />
+      <workItem from="1565701966372" duration="5704000" />
+      <workItem from="1565712958067" duration="99000" />
+      <workItem from="1565768334343" duration="1603000" />
+      <workItem from="1565773816381" duration="4050000" />
+      <workItem from="1565782431497" duration="3176000" />
+      <workItem from="1566221945700" duration="2719000" />
+      <workItem from="1566237616380" duration="3864000" />
+      <workItem from="1566242442832" duration="131000" />
+      <workItem from="1566246738018" duration="2577000" />
+      <workItem from="1566301901210" duration="1679000" />
+      <workItem from="1566306200116" duration="3186000" />
+      <workItem from="1566334065603" duration="1199000" />
+      <workItem from="1566343695695" duration="805000" />
+      <workItem from="1566344725076" duration="54000" />
+      <workItem from="1566378154971" duration="3467000" />
+      <workItem from="1566383237309" duration="1166000" />
+      <workItem from="1566419603289" duration="2815000" />
+      <workItem from="1566427854373" duration="3178000" />
+      <workItem from="1566464780835" duration="701000" />
+      <workItem from="1566476145353" duration="1248000" />
+      <workItem from="1566730749451" duration="2942000" />
+      <workItem from="1566824220533" duration="4085000" />
+      <workItem from="1566840244272" duration="1189000" />
+      <workItem from="1566857361181" duration="607000" />
+      <workItem from="1566987879678" duration="1085000" />
+      <workItem from="1566994519105" duration="1249000" />
+      <workItem from="1567012111803" duration="3175000" />
+      <workItem from="1567025200892" duration="3776000" />
+      <workItem from="1567073799208" duration="3693000" />
+      <workItem from="1567081746977" duration="4417000" />
+      <workItem from="1567119673335" duration="3317000" />
+      <workItem from="1567164101238" duration="5228000" />
+      <workItem from="1567418183177" duration="3070000" />
+      <workItem from="1567428785581" duration="3016000" />
+      <workItem from="1567509191729" duration="5975000" />
+      <workItem from="1567544942427" duration="2006000" />
+      <workItem from="1567602185371" duration="1577000" />
+      <workItem from="1567628467811" duration="4059000" />
+      <workItem from="1567676844736" duration="958000" />
+      <workItem from="1567682323575" duration="2421000" />
+      <workItem from="1567686003060" duration="62000" />
+      <workItem from="1567686147736" duration="255000" />
+      <workItem from="1567687412251" duration="3581000" />
+      <workItem from="1567709074900" duration="1434000" />
+      <workItem from="1567711680755" duration="2134000" />
+      <workItem from="1567715238684" duration="5088000" />
+      <workItem from="1567721942148" duration="1159000" />
+      <workItem from="1567771091588" duration="1963000" />
+      <workItem from="1567775503384" duration="87000" />
+      <workItem from="1567775780724" duration="1958000" />
+      <workItem from="1567797107835" duration="3022000" />
+      <workItem from="1567831541123" duration="1187000" />
+      <workItem from="1568026249522" duration="604000" />
+      <workItem from="1568061462949" duration="5084000" />
+      <workItem from="1568068512026" duration="197000" />
+      <workItem from="1568069309888" duration="9000" />
+      <workItem from="1568069340509" duration="17000" />
+      <workItem from="1568103990056" duration="2264000" />
+      <workItem from="1568116264576" duration="1113000" />
+      <workItem from="1568747028153" duration="3368000" />
+      <workItem from="1568756449335" duration="1710000" />
+      <workItem from="1568894806179" duration="2615000" />
+      <workItem from="1569067997989" duration="1628000" />
+      <workItem from="1569318446097" duration="1403000" />
+      <workItem from="1569327929176" duration="3800000" />
+      <workItem from="1569362129482" duration="3651000" />
+      <workItem from="1569400650582" duration="701000" />
+      <workItem from="1569401613124" duration="29000" />
+      <workItem from="1569405926905" duration="2943000" />
+      <workItem from="1569412937431" duration="176000" />
+      <workItem from="1569415868687" duration="1425000" />
+      <workItem from="1569418523376" duration="72000" />
+      <workItem from="1569421498527" duration="1066000" />
+      <workItem from="1569446341619" duration="2929000" />
+      <workItem from="1569502786226" duration="588000" />
+      <workItem from="1569524075918" duration="2640000" />
+      <workItem from="1569528506230" duration="3324000" />
+      <workItem from="1569759995250" duration="1049000" />
+      <workItem from="1569774944989" duration="994000" />
+      <workItem from="1569785938335" duration="3961000" />
+      <workItem from="1569790885287" duration="2580000" />
+      <workItem from="1569794619467" duration="1481000" />
+      <workItem from="1569834931669" duration="2732000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="225948000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22814499" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5021322" side_tool="true" weight="0.37919825" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4978678" visible="true" weight="0.37919825" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32995737" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16204691" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50159913" side_tool="true" weight="0.37919825" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49840087" weight="0.37919825" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/symfony/public/uploads/car_image/5d718462252cf.jpeg" />
+    <entry file="file://$PROJECT_DIR$/symfony/vendor/symfony/filesystem/Filesystem.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="162" column="20" selection-start-line="162" selection-start-column="20" selection-end-line="162" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cars/symfony/src/Controller/CarAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="88" column="52" lean-forward="true" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="52" />
+          <folding>
+            <element signature="e#115#148#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/templates/car/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/templates/car_admin/list.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="46" column="56" selection-start-line="46" selection-start-column="56" selection-end-line="46" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/templates/car_admin/new.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" column="10" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="29" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/templates/car_admin/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/public/uploads/car_image/5d7256e085611.jpeg" />
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Photo/PhotoManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/public/uploads/car_image/5d76d087e23ec.jpeg" />
+    <entry file="file://$PROJECT_DIR$/symfony/public/uploads/car_image/5d76d1d2bac26.jpeg" />
+    <entry file="file://$PROJECT_DIR$/symfony/public/uploads/car_image/5d76d1f62dee9.jpeg" />
+    <entry file="file://$PROJECT_DIR$/symfony/public/uploads/car_image/car1-5ceef19caccd9.jpeg" />
+    <entry file="file://$PROJECT_DIR$/symfony/src/Infrastructure/Form/CarFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1149">
+          <caret line="56" column="35" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+          <folding>
+            <element signature="e#43#68#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cars/symfony/templates/content_base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="10" selection-start-line="3" selection-start-column="4" selection-end-line="11" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../cars/symfony/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="68" column="21" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="68" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/public/uploads/car_image/5d7767b78afc4.jpeg" />
+    <entry file="file://$PROJECT_DIR$/symfony/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/vendor/symfony/http-foundation/File/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/vendor/symfony/http-foundation/File/UploadedFile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="31" column="28" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Infrastructure/Service/UploaderHelper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <folding>
+            <element signature="e#6#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/vendor/symfony/event-dispatcher/EventDispatcher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5299">
+          <caret line="32" column="6" selection-start-line="32" selection-start-column="6" selection-end-line="32" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Event/ProductWasCreatedEvent.php" />
+    <entry file="file://$PROJECT_DIR$/symfony/vendor/symfony/event-dispatcher-contracts/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/vendor/symfony/event-dispatcher/Event.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+          <folding>
+            <element signature="e#7#236#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/date/date_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="81" column="6" selection-start-line="81" selection-start-column="6" selection-end-line="81" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Infrastructure/Controller/CarAdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="44" column="47" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+          <folding>
+            <element signature="e#49#114#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/vendor/ramsey/uuid/src/Uuid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-990">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/composer.lock">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-858" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Model/CarRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Application/UseCases/Car/ListCarsFiltered.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+          <folding>
+            <element signature="e#48#81#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/nginx/access.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/nginx/error.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/database.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="35" column="138" lean-forward="true" selection-start-line="35" selection-start-column="138" selection-end-line="35" selection-end-column="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Event/DomainEventPublisher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Event/DomainEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="24" />
+          <folding>
+            <element signature="e#36#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Criteria/Criteria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-181">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Infrastructure/Event/SymfonyDomainEventPublisher.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="34" column="83" selection-start-line="34" selection-start-column="83" selection-end-line="34" selection-end-column="83" />
+          <folding>
+            <element signature="e#44#77#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Application/UseCases/Car/ListAllCarsEnabled.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="43" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Application/UseCases/Car/ListAllCars.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="7" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Application/UseCases/Car/InsertCar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+          <folding>
+            <element signature="e#48#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Application/UseCases/Car/UpdateCar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+          <folding>
+            <element signature="e#48#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Application/UseCases/Car/DeleteCar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="677">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="e#48#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Event/CarCreated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Event/CarDeleted.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Event/CarUpdated.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Aggregate/AggregateRoot.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/var/log/dev.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-21297" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symfony/src/Domain/Model/Car.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding>
+            <element signature="e#36#75#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

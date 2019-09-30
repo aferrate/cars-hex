@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('js/delete_car.js') }}"></script>
+    <script src="{{ asset('js/bootbox.min.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <a href="{{ path('admin_car_new') }}" class="btn btn-primary pull-right">
+        Create <span class="fa fa-plus-circle"></span>
+    </a>
+    <h1>All Cars</h1>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Mark</th>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Published?</th>
+            <th>Photo</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for car in cars %}
+            <tr>
+                <td>{{ car.id }}</td>
+                <td>{{ car.mark }}</td>
+                <td>{{ car.model }}</td>
+                <td>{{ car.year }}</td>
+                <td>
+                    <span class="fa fa-{{ car.isEnabled ? 'check' : 'times' }}"></span>
+                </td>
+                <td>
+                    {% if car.imageFilename is not empty %}
+                        <img class="car-img" src="/uploads/car_image{{ asset(car.imageFilename) }}">
+                    {% else %}
+                        no photo yet
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ path('admin_car_edit', {id: car.id }) }}">
+                        <span class="fa fa-pencil"></span>
+                    </a>
+                </td>
+                <td>
+                    <a class="delete_car" data-car-id="{{ car.id }}" href="javascript:void(0)">
+                        <span class="fa fa-trash"></span>
+                    </a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

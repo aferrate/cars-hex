@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="{% block content_class %}show-article-container p-3 mt-4{% endblock %}">
+                    <h1>Edit the Car!</h1>
+
+                    {{ include('car_admin/_form.html.twig', {
+                        button_text: 'Update!'
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('js/admin_car_form.js') }}"></script>
+{% endblock %}

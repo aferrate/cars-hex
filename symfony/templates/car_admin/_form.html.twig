@@ -1,0 +1,27 @@
+{{ form_start(carForm) }}
+    {{ form_row(carForm.mark, {
+        label: 'Car mark'
+    }) }}
+    {{ form_row(carForm.imageFile, {
+        attr: {
+            'placeholder': 'Select an article image'
+        }
+    }) }}
+    {{ form_row(carForm.model) }}
+    {{ form_row(carForm.country, {
+        attr: {
+            'data-city-url': path('admin_car_country_select'),
+            'class': 'js-car-form-country'
+        }
+    }) }}
+    <div class="js-city-target">
+        {%  if carForm.city is defined %}
+            {{ form_row(carForm.city) }}
+        {% endif %}
+    </div>
+    {{ form_row(carForm.description) }}
+    {{ form_row(carForm.year) }}
+    {{ form_row(carForm.enabled) }}
+
+    <button type="submit" class="btn btn-primary">{{ button_text }}</button>
+{{ form_end(carForm) }}

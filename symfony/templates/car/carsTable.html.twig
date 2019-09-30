@@ -1,0 +1,46 @@
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Mark</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Last update</th>
+        <th>Photo</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% if cars is not empty %}
+            {% for car in cars  %}
+                <tr>
+                    <td>
+                        <a href="{{ path('car_show', {slug: car.slug}) }}">{{ car.id }}</a>
+                    </td>
+                    <td>
+                        {{ car.mark }}
+                    </td>
+                    <td>
+                        {{ car.model }}
+                    </td>
+                    <td>
+                        {{ car.year }}
+                    </td>
+                    <td>
+                        {{ car.updatedAt|date('d-m-Y') }}
+                    </td>
+                    <td>
+                        {% if car.imageFilename is not empty %}
+                            <img class="car-img" src="/uploads/car_image{{ asset(car.imageFilename) }}">
+                        {% else %}
+                            no photo yet
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="5" class="text-center">No cars found</td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>

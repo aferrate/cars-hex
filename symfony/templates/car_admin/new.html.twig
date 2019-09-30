@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+    <script src="{{ asset('js/algolia-autocomplete.js') }}"></script>
+    <script src="{{ asset('js/admin_car_form.js') }}"></script>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+
+    <link rel="stylesheet" href="{{ asset('css/algolia-autocomplete.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="{% block content_class %}show-article-container p-3 mt-4{% endblock %}">
+                    <h1>Launch a new Car!</h1>
+
+                    {{ include('car_admin/_form.html.twig', {
+                        button_text: 'Create!'
+                    }) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

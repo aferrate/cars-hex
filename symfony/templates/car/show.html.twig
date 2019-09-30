@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Mark</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Description</th>
+                    <th>Last update</th>
+                    <th>Country</th>
+                    <th>City</th>
+                    <th>Enabled</th>
+                    <th>Photo</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            {{ car.id }}
+                        </td>
+                        <td>
+                            {{ car.mark }}
+                        </td>
+                        <td>
+                            {{ car.model }}
+                        </td>
+                        <td>
+                            {{ car.year }}
+                        </td>
+                        <td>
+                            {{ car.description }}
+                        </td>
+                        <td>
+                            {{ car.updatedAt|date('d-m-Y') }}
+                        </td>
+                        <td>
+                            {{ car.country }}
+                        </td>
+                        <td>
+                            {{ car.city }}
+                        </td>
+                        <td>
+                            {{ car.enabled }}
+                        </td>
+                        <td>
+                            {% if car.imageFilename is not empty %}
+                                <img class="car-img" src="/uploads/car_image{{ asset(car.imageFilename) }}">
+                            {% else %}
+                                no photo yet
+                            {% endif %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

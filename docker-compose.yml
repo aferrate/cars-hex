@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  mysql:
+    image: mysql:5.7
+    ports: ['3306:3306']
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=cars
+      - MYSQL_USER=symfony
+      - MYSQL_PASSWORD=password
+    volumes:
+      - ./db:/docker-entrypoint-initdb.d
+
+  php:
+    build: ./docker/php
+    ports: ['9000:9001']
+    depends_on:
+      - mysql
+    volumes:
+      - ./symfony/:/var/www/symfony:cached
+
+  nginx:
+    build: ./docker/nginx
+    ports: ['80:80']
+    depends_on:
+      - php
+    volumes:
+      - ./logs/nginx:/var/log/nginx:cached
+      - ./symfony/:/var/www/symfony:cached
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080
+    depends_on:
+      - mysql
