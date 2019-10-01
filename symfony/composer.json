@@ -24,7 +24,8 @@
         "symfony/debug-pack": "^1.0",
         "symfony/monolog-bundle": "^3.4",
         "symfony/profiler-pack": "^1.0",
-        "symfony/var-dumper": "4.3.*"
+        "symfony/var-dumper": "4.3.*",
+        "symfony/web-profiler-bundle": "4.3.*"
     },
     "config": {
         "preferred-install": {
