@@ -3,6 +3,7 @@
 namespace App\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
+use Doctrine\ORM\EntityManager;
 
 abstract class AbstractTest extends KernelTestCase
 {
@@ -10,24 +11,23 @@ abstract class AbstractTest extends KernelTestCase
 
     protected function setUp(): void
     {
-        $kernel = self::bootKernel();
+        self::bootKernel(['environment' => 'test']);
 
-        $this->entityManager = $kernel->getContainer()
-            ->get('doctrine')
-            ->getManager()
-        ;
+        parent::setUp();
     }
 
     protected function tearDown(): void
     {
         parent::tearDown();
-
-        $this->entityManager->close();
-        $this->entityManager = null;
     }
 
     protected function clearUnitOfWork(): void
     {
-        $this->entityManager->clear();
+        $this->service(EntityManager::class)->clear();
+    }
+
+    protected function service($id)
+    {
+        return self::$container->get($id);
     }
 }

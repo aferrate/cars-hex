@@ -13,4 +13,6 @@ interface CarRepositoryInterface
     public function findAll(): array;
     public function searchByCriteria(Criteria $criteria): array;
     public function findOneById($id);
+    public function findOneByMark($mark);
+    public function findOneByModel($model);
 }

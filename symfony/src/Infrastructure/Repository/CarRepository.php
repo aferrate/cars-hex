@@ -89,4 +89,14 @@ class CarRepository implements CarRepositoryInterface
     {
         return $this->entityManager->getRepository(Car::class)->findOneBy(['id' => $id]);
     }
+
+    public function findOneByMark($mark)
+    {
+        return $this->entityManager->getRepository(Car::class)->findOneBy(['mark' => $mark]);
+    }
+
+    public function findOneByModel($model)
+    {
+        return $this->entityManager->getRepository(Car::class)->findOneBy(['model' => $model]);
+    }
 }

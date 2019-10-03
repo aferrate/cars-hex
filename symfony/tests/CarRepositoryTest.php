@@ -2,9 +2,11 @@
 
 namespace App\Tests;
 
+use App\Domain\Criteria\Criteria;
 use App\Domain\Model\Car;
 use DateTime;
 use DateTimeImmutable;
+use App\Infrastructure\Repository\CarRepository;
 
 class CarRepositoryTest extends AbstractTest
 {
@@ -21,12 +23,72 @@ class CarRepositoryTest extends AbstractTest
         $car->setSlug('test-car-1');
         $car->setCreatedAt(new DateTimeImmutable('NOW'));
         $car->setUpdatedAt(new DateTime('NOW'));
+        $car->setEnabled(true);
 
         $this->repository()->save($car);
     }
 
-    private function repository()
+    /** @test */
+    public function it_should_delete_a_video(): void
     {
-        return $this->entityManager->getRepository(Car::class);
+        $car = $this->repository()->findOneByMark('test mark');
+
+        $this->repository()->delete($car);
+    }
+
+    /** @test */
+    public function it_should_find_by_slug(): void
+    {
+        $car = $this->repository()->getBySlug('mark-0-model-0-2000');
+
+        $this->assertInstanceOf(Car::class, $car);
+    }
+
+    /** @test */
+    public function it_should_find_all_enabled(): void
+    {
+        $cars = $this->repository()->findAllEnabled();
+
+        $this->assertIsArray($cars);
+    }
+
+    /** @test */
+    public function it_should_find_all(): void
+    {
+        $cars = $this->repository()->findAllEnabled();
+
+        $this->assertIsArray($cars);
+    }
+
+    /** @test */
+    public function it_should_find_by_id(): void
+    {
+        $car = $this->repository()->findOneById(1);
+
+        $this->assertInstanceOf(Car::class, $car);
+    }
+
+    /** @test */
+    public function it_should_find_by_criteria(): void
+    {
+        $filters = [];
+        $filters[] = 'mark LIKE \'%mark%\'';
+
+        $criteria = new Criteria($filters, 'DESC');
+
+        $cars = $this->repository()->searchByCriteria($criteria);
+
+        $this->assertIsArray($cars);
+    }
+
+    /** @test */
+    public function it_should_not_find_a_non_existing_car(): void
+    {
+        $this->assertNull($this->repository()->findOneById(999));
+    }
+
+    private function repository(): CarRepository
+    {
+        return $this->service(CarRepository::class);
     }
 }
