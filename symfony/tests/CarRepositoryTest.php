@@ -42,6 +42,7 @@ class CarRepositoryTest extends AbstractTest
         $car = $this->repository()->getBySlug('mark-0-model-0-2000');
 
         $this->assertInstanceOf(Car::class, $car);
+        $this->assertEquals('model 0', $car->getModel());
     }
 
     /** @test */
@@ -50,6 +51,7 @@ class CarRepositoryTest extends AbstractTest
         $cars = $this->repository()->findAllEnabled();
 
         $this->assertIsArray($cars);
+        $this->assertNotEmpty($cars);
     }
 
     /** @test */
@@ -58,6 +60,7 @@ class CarRepositoryTest extends AbstractTest
         $cars = $this->repository()->findAllEnabled();
 
         $this->assertIsArray($cars);
+        $this->assertNotEmpty($cars);
     }
 
     /** @test */
@@ -66,6 +69,7 @@ class CarRepositoryTest extends AbstractTest
         $car = $this->repository()->findOneById(1);
 
         $this->assertInstanceOf(Car::class, $car);
+        $this->assertEquals('model 0', $car->getModel());
     }
 
     /** @test */
@@ -79,6 +83,7 @@ class CarRepositoryTest extends AbstractTest
         $cars = $this->repository()->searchByCriteria($criteria);
 
         $this->assertIsArray($cars);
+        $this->assertNotEmpty($cars);
     }
 
     /** @test */

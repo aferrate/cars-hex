@@ -19,6 +19,7 @@
         "symfony/yaml": "4.3.*"
     },
     "require-dev": {
+        "behat/behat": "^3.5",
         "phpunit/phpunit": "^8.3",
         "symfony/debug-bundle": "4.3.*",
         "symfony/debug-pack": "^1.0",
