@@ -182,7 +182,7 @@ final class Car extends AggregateRoot
      */
     public function setSlug(string $slug): void
     {
-        $this->slug = $slug;
+        $this->slug = strtolower(str_replace(' ', '-', $slug));
     }
 
     /**

@@ -1,29 +1,18 @@
 <?php
 
-namespace App\Tests;
+namespace App\Tests\Infrastructure;
 
 use App\Domain\Criteria\Criteria;
 use App\Domain\Model\Car;
-use DateTime;
-use DateTimeImmutable;
+use App\Tests\Domain\CarMother;
 use App\Infrastructure\Repository\CarRepository;
 
-class CarRepositoryTest extends AbstractTest
+class CarRepositoryFunctionalTest extends AbstractTest
 {
     /** @test */
     public function it_should_save_a_video(): void
     {
-        $car = new Car();
-        $car->setMark('test mark');
-        $car->setModel('test model');
-        $car->setYear(1900);
-        $car->setCountry('Spain');
-        $car->setCity('Madrid');
-        $car->setDescription('test description');
-        $car->setSlug('test-car-1');
-        $car->setCreatedAt(new DateTimeImmutable('NOW'));
-        $car->setUpdatedAt(new DateTime('NOW'));
-        $car->setEnabled(true);
+        $car = CarMother::createRandom();
 
         $this->repository()->save($car);
     }
@@ -31,7 +20,7 @@ class CarRepositoryTest extends AbstractTest
     /** @test */
     public function it_should_delete_a_video(): void
     {
-        $car = $this->repository()->findOneByMark('test mark');
+        $car = $this->repository()->findOneByMark('mark 0');
 
         $this->repository()->delete($car);
     }
@@ -39,10 +28,10 @@ class CarRepositoryTest extends AbstractTest
     /** @test */
     public function it_should_find_by_slug(): void
     {
-        $car = $this->repository()->getBySlug('mark-0-model-0-2000');
+        $car = $this->repository()->getBySlug('mark-1-model-1-2001');
 
         $this->assertInstanceOf(Car::class, $car);
-        $this->assertEquals('model 0', $car->getModel());
+        $this->assertEquals('model 1', $car->getModel());
     }
 
     /** @test */
@@ -66,10 +55,10 @@ class CarRepositoryTest extends AbstractTest
     /** @test */
     public function it_should_find_by_id(): void
     {
-        $car = $this->repository()->findOneById(1);
+        $car = $this->repository()->findOneById(2);
 
         $this->assertInstanceOf(Car::class, $car);
-        $this->assertEquals('model 0', $car->getModel());
+        $this->assertEquals('model 1', $car->getModel());
     }
 
     /** @test */
