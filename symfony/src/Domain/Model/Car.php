@@ -146,6 +146,14 @@ final class Car extends AggregateRoot
     }
 
     /**
+     * @param int $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    /**
      * @param string $mark
      */
     public function setMark(string $mark): void

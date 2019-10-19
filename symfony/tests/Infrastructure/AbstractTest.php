@@ -21,11 +21,6 @@ abstract class AbstractTest extends KernelTestCase
         parent::tearDown();
     }
 
-    protected function clearUnitOfWork(): void
-    {
-        $this->service(EntityManager::class)->clear();
-    }
-
     protected function service($id)
     {
         return self::$container->get($id);
