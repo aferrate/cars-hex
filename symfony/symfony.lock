@@ -5,6 +5,18 @@
     "behat/gherkin": {
         "version": "v4.6.0"
     },
+    "behat/mink": {
+        "version": "1.7.x-dev"
+    },
+    "behat/mink-browserkit-driver": {
+        "version": "1.3.3"
+    },
+    "behat/mink-extension": {
+        "version": "2.3.1"
+    },
+    "behat/mink-goutte-driver": {
+        "version": "v1.2.1"
+    },
     "behat/transliterator": {
         "version": "v1.2.0"
     },
@@ -102,8 +114,20 @@
             "config/packages/dev/easy_log_handler.yaml"
         ]
     },
+    "fabpot/goutte": {
+        "version": "v3.2.3"
+    },
     "fzaninotto/faker": {
         "version": "v1.8.0"
+    },
+    "guzzlehttp/guzzle": {
+        "version": "6.3.3"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.6.1"
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"
@@ -177,8 +201,14 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/log": {
         "version": "1.1.0"
+    },
+    "ralouphie/getallheaders": {
+        "version": "3.0.3"
     },
     "ramsey/uuid": {
         "version": "3.8.0"
@@ -234,6 +264,9 @@
     "symfony/asset": {
         "version": "v4.3.3"
     },
+    "symfony/browser-kit": {
+        "version": "v4.3.5"
+    },
     "symfony/cache": {
         "version": "v4.3.3"
     },
@@ -241,7 +274,7 @@
         "version": "v1.1.5"
     },
     "symfony/class-loader": {
-        "version": "v3.4.31"
+        "version": "v3.4.32"
     },
     "symfony/config": {
         "version": "v4.3.3"
@@ -258,6 +291,9 @@
             "bin/console",
             "config/bootstrap.php"
         ]
+    },
+    "symfony/css-selector": {
+        "version": "v4.3.5"
     },
     "symfony/debug": {
         "version": "v4.3.3"
@@ -282,6 +318,9 @@
     },
     "symfony/doctrine-bridge": {
         "version": "v4.3.3"
+    },
+    "symfony/dom-crawler": {
+        "version": "v4.3.5"
     },
     "symfony/dotenv": {
         "version": "v4.3.3"
