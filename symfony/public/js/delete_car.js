@@ -20,7 +20,7 @@ $(document).ready(function() {
                         $.ajax({
                             type: 'POST',
                             url: '/admin/car/delete',
-                            data: 'carid='+carid
+                            data: {carid: carid}
                         })
                             .done(function(response){
                                 bootbox.alert(response);

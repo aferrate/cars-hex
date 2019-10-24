@@ -1,4 +1,7 @@
 {
+    "beberlei/assert": {
+        "version": "v2.9.9"
+    },
     "behat/behat": {
         "version": "v3.5.0"
     },
@@ -117,6 +120,9 @@
     "fabpot/goutte": {
         "version": "v3.2.3"
     },
+    "firebase/php-jwt": {
+        "version": "v5.0.0"
+    },
     "fzaninotto/faker": {
         "version": "v1.8.0"
     },
@@ -128,6 +134,9 @@
     },
     "guzzlehttp/psr7": {
         "version": "1.6.1"
+    },
+    "imbo/behat-api-extension": {
+        "version": "v2.2.1"
     },
     "jdorn/sql-formatter": {
         "version": "v1.2.17"

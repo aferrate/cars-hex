@@ -1,5 +1,15 @@
 default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext
+        - Imbo\BehatApiExtension\Context\ApiContext
+
   extensions:
     Behat\MinkExtension:
       base_url: http://x.x.x.x
       goutte: ~
+
+    Imbo\BehatApiExtension:
+      apiClient:
+        base_uri: http://x.x.x.x

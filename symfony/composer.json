@@ -24,6 +24,7 @@
         "behat/mink-extension": "^2.3",
         "behat/mink-goutte-driver": "^1.2",
         "fzaninotto/faker": "^1.8",
+        "imbo/behat-api-extension": "^2.2",
         "phpunit/phpunit": "^8.3",
         "symfony/debug-bundle": "4.3.*",
         "symfony/debug-pack": "^1.0",
