@@ -32,13 +32,8 @@ class InsertCar
     /**
      * @return bool
      */
-    public function insert($car, $uploadedFile): bool
+    public function insert($car): bool
     {
-        if ($uploadedFile) {
-            $newFilename = $this->photoManager->uploadArticleImage($uploadedFile, null);
-            $car->setImageFilename($newFilename);
-        }
-
         $car->setCreatedAt(new DateTimeImmutable('NOW'));
         $car->setUpdatedAt(new DateTime('NOW'));
         $car->setSlug($car->getMark().'-'.$car->getModel().'-'.$car->getYear());

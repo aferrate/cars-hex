@@ -238,6 +238,6 @@ final class Car extends AggregateRoot
      */
     public function setImageFilename(string $imageFilename): void
     {
-        $this->imageFilename = $imageFilename;
+        $this->imageFilename = ($imageFilename === '' ? null : $imageFilename);
     }
 }

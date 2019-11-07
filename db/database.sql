@@ -40,7 +40,7 @@ INSERT INTO `car` (`id`, `mark`, `model`, `year`, `description`, `slug`, `enable
 (8, 'mark 7', 'model 7', 2007, 'description 7', 'mark-7-model-7-2007', 1, '2019-05-26 22:46:55', '2019-05-26 22:46:55', NULL, NULL, NULL),
 (9, 'mark 8', 'model 8', 2008, 'description 8', 'mark-8-model-8-2008', 1, '2019-05-27 22:46:55', '2019-05-27 22:46:55', NULL, NULL, NULL),
 (10, 'mark 9', 'model 9', 2009, 'description 9', 'mark-9-model-9-2009', 1, '2019-05-28 22:46:55', '2019-05-28 22:46:55', NULL, NULL, NULL),
-(11, 'mark 10', 'model 10', 2010, 'description 10', 'mark-10-model-10-2010', 1, '2019-05-29 22:54:52', '2019-05-29 22:55:19', 'eeuu', 'Dallas', 'car1-5ceef19caccd9.jpeg');
+(11, 'mark 10', 'model 10', 2010, 'description 10', 'mark-10-model-10-2010', 1, '2019-05-29 22:54:52', '2019-05-29 22:55:19', 'eeuu', 'Dallas', 'car1-5ceef19caccd9.jpg');
 
 ALTER TABLE `car`
     ADD PRIMARY KEY (`id`),

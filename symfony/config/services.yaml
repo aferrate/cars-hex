@@ -32,3 +32,11 @@ services:
     App\Infrastructure\Service\UploaderHelper:
         arguments:
             - '%env(PHOTOS_PATH)%'
+
+    App\Application\Command\Handler\:
+        resource: '../src/Application/Command/Handler'
+        tags: ['messenger.message_handler']
+
+    App\Application\Query\Handler\:
+        resource: '../src/Application/Query/Handler'
+        tags: ['messenger.message_handler']

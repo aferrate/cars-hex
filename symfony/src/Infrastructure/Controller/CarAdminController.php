@@ -2,53 +2,74 @@
 
 namespace App\Infrastructure\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Application\Command\DeleteCarCommand;
+use App\Application\Command\CreateCarCommand;
+use App\Application\Command\UpdateCarCommand;
+use App\Domain\Photo\PhotoManager;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Application\UseCases\Car\ListAllCars;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use App\Application\UseCases\Car\DeleteCar;
-use App\Application\UseCases\Car\InsertCar;
 use App\Infrastructure\Form\CarFormType;
 use Symfony\Component\HttpFoundation\Response;
 use App\Application\UseCases\Car\CitySelect;
 use App\Domain\Model\Car;
-use App\Application\UseCases\Car\UpdateCar;
+use App\Application\Query\ListAllCarsQuery;
 
-class CarAdminController extends AbstractController
+class CarAdminController extends CustomAbstractController
 {
     /**
      * @Route("/admin/car", name="admin_list_cars")
      */
-    public function list(ListAllCars $query)
+    public function list()
     {
+        $command = new ListAllCarsQuery();
+
         return $this->render('car_admin/list.html.twig', [
-            'cars' => $query->findAllCars()
+            'cars' => $this->handleMessage($command)
         ]);
     }
 
     /**
      * @Route("/admin/car/delete")
      */
-    public function delete(Request $request, DeleteCar $query)
+    public function delete(Request $request)
     {
-        if(!$query->delete($request->request->get('carid'))) {
-            return new JsonResponse('not found', 500);
-        }
+        $command = new DeleteCarCommand($request->request->get('carid'));
 
-        return new JsonResponse('deleted', 200);
+        try {
+            $this->handleMessage($command);
+
+            return new JsonResponse('deleted', 200);
+        } catch (\Exception $e) {
+            return new JsonResponse('car not found', 500);
+        }
     }
 
     /**
      * @Route("/admin/car/new", name="admin_car_new")
      */
-    public function new(Request $request, InsertCar $query)
+    public function new(Request $request, PhotoManager $photoManager)
     {
         $form = $this->createForm(CarFormType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $query->insert($form->getData(), $form['imageFile']->getData());
+            $image = $form['imageFile']->getData();
+            $imageName = $image === null ? '' : $photoManager->uploadArticleImage($image, null);
+            $enabled = isset($request->request->get('car_form')['enabled']) ? 1 : 0;
+
+            $command = new CreateCarCommand(
+                $request->request->get('car_form')['mark'],
+                $request->request->get('car_form')['model'],
+                $request->request->get('car_form')['country'],
+                $request->request->get('car_form')['city'],
+                $request->request->get('car_form')['description'],
+                $request->request->get('car_form')['year'],
+                $enabled,
+                $imageName
+            );
+
+            $this->handleMessage($command);
 
             $this->addFlash('success', 'Car Created!');
 
@@ -63,13 +84,30 @@ class CarAdminController extends AbstractController
     /**
      * @Route("/admin/car/{id}/edit", name="admin_car_edit")
      */
-    public function edit(Car $car, Request $request, UpdateCar $query)
+    public function edit(Car $car, Request $request, PhotoManager $photoManager)
     {
         $form = $this->createForm(CarFormType::class, $car);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $query->update($car, $form['imageFile']->getData());
+            $oldImage = $car->getImageFilename();
+            $image = $form['imageFile']->getData();
+            $imageName = $image === null ? '' : $photoManager->uploadArticleImage($image, $oldImage);
+            $enabled = isset($request->request->get('car_form')['enabled']) ? 1 : 0;
+
+            $command = new UpdateCarCommand(
+                $car->getId(),
+                $request->request->get('car_form')['mark'],
+                $request->request->get('car_form')['model'],
+                $request->request->get('car_form')['country'],
+                $request->request->get('car_form')['city'],
+                $request->request->get('car_form')['description'],
+                $request->request->get('car_form')['year'],
+                $enabled,
+                $imageName
+            );
+
+            $this->handleMessage($command);
 
             $this->addFlash('success', 'Car Updated!');
 

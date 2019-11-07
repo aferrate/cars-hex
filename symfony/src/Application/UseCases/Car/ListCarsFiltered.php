@@ -21,24 +21,24 @@ class ListCarsFiltered
     /**
      * @return array
      */
-    public function getCarsFiltered($request): array
+    public function getCarsFiltered($query): array
     {
         $filters = [];
 
-        switch ($request->request->get('field')) {
+        switch ($query->getField()) {
             case 'mark':
-                if($request->request->get('search') !== '') {
-                    $filters[] = 'mark LIKE \'%' . $request->request->get('search') . '%\'';
+                if($query->getSearch() !== '') {
+                    $filters[] = 'mark LIKE \'%' . $query->getSearch() . '%\'';
                 }
                 break;
             case 'model':
-                if($request->request->get('search') !== '') {
-                    $filters[] = 'model LIKE \'%' . $request->request->get('search') . '%\'';
+                if($query->getSearch() !== '') {
+                    $filters[] = 'model LIKE \'%' . $query->getSearch() . '%\'';
                 }
                 break;
             case 'year':
-                if($request->request->get('search') !== '') {
-                    $filters[] = 'year ='. $request->request->get('search') .'';
+                if($query->getSearch() !== '') {
+                    $filters[] = 'year ='. $query->getSearch() .'';
                 }
                 break;
         }

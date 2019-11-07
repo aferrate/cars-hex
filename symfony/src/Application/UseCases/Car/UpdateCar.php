@@ -33,13 +33,18 @@ class UpdateCar
     /**
      * @return bool
      */
-    public function update($car, $uploadedFile): bool
+    public function update($command): bool
     {
-        if ($uploadedFile) {
-            $newFilename = $this->photoManager->uploadArticleImage($uploadedFile, $car->getImageFilename());
-            $car->setImageFilename($newFilename);
-        }
+        $car = $this->carRepository->findOneById($command->getId());
 
+        $car->setMark($command->getMark());
+        $car->setModel($command->getModel());
+        $car->setCountry($command->getCountry());
+        $car->setCity($command->getCity());
+        $car->setDescription($command->getDescription());
+        $car->setYear($command->getYear());
+        $car->setEnabled($command->getEnabled());
+        $car->setImageFilename($command->getImageName());
         $car->setUpdatedAt(new DateTime('NOW'));
 
         $this->carRepository->save($car);

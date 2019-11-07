@@ -36,7 +36,7 @@ class DeleteCar
         $car = $this->carRepository->findOneById($carId);
 
         if(!$car) {
-            return false;
+            throw new \Exception();
         }
 
         $this->photoManager->deleteOldPhoto($car->getImageFilename());
