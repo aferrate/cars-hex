@@ -4,19 +4,19 @@ namespace App\Infrastructure\Event;
 
 use App\Domain\Event\DomainEvent;
 use App\Domain\Event\DomainEventPublisher;
-use Psr\Log\LoggerInterface;
 
 class SymfonyDomainEventPublisher implements DomainEventPublisher
 {
     private $events = [];
-    private $logger;
+    private $rabbitProducer;
 
     /**
      * SymfonyDomainEventPublisher constructor.
+     * @param $rabbitProducer
      */
-    public function __construct(LoggerInterface $logger)
+    public function __construct($rabbitProducer)
     {
-        $this->logger = $logger;
+        $this->rabbitProducer = $rabbitProducer;
     }
 
     public function record(DomainEvent $domainEvent): void
@@ -32,14 +32,23 @@ class SymfonyDomainEventPublisher implements DomainEventPublisher
         }
 
         foreach ($this->events as $event) {
-            $message = "######## event name " . $event->eventName() . " ocurred on " . $event->occurredOn() . "\n";
-            $message .= " data event";
+            $dataEvents = 'data events:';
 
             foreach ($event->data() as $element) {
-                $message .= " ". $element;
+                $dataEvents .= " ". $element;
             }
 
-            $this->logger->info($message);
+            $message = [
+                'eventId' => $event->eventId(),
+                'eventName' => $event->eventName(),
+                'eventData' => $dataEvents,
+                'ocurredOn' => $event->occurredOn()
+            ];
+
+            $rabbitMessage = json_encode($message);
+
+            $this->rabbitProducer->setContentType('application/json');
+            $this->rabbitProducer->publish($rabbitMessage);
         }
     }
 }

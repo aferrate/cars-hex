@@ -1,0 +1,20 @@
+old_sound_rabbit_mq:
+  connections:
+      default:
+          host: '%rabbitmq_host%'
+          port: '%rabbitmq_port%'
+          user: '%rabbitmq_user%'
+          password: '%rabbitmq_password%'
+          vhost: '%rabbitmq_statuslayer_vhost%'
+  producers:
+      logging:
+          connection: default
+          exchange_options:
+              name: events
+              type: direct
+  consumers:
+      logging:
+          connection:       default
+          exchange_options: {name: 'events', type: direct}
+          queue_options:    {name: 'events'}
+          callback:         log_service

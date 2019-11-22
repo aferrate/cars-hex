@@ -5,6 +5,7 @@
         "php": "^7.1.3",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "php-amqplib/rabbitmq-bundle": "^1.14",
         "ramsey/uuid": "^3.8",
         "sensio/framework-extra-bundle": "^5.4",
         "symfony/asset": "4.3.*",
@@ -17,7 +18,8 @@
         "symfony/messenger": "4.3.*",
         "symfony/orm-pack": "^1.0",
         "symfony/twig-bundle": "4.3.*",
-        "symfony/yaml": "4.3.*"
+        "symfony/yaml": "4.3.*",
+        "ext-json": "*"
     },
     "require-dev": {
         "behat/behat": "^3.5",

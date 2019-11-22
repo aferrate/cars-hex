@@ -32,3 +32,12 @@ services:
       - 8080:8080
     depends_on:
       - mysql
+
+  rabbitmq:
+    image: 'rabbitmq:3.7-management'
+    restart: unless-stopped
+    ports:
+      - 5630:5672
+      - 15630:15672
+    env_file:
+      - ./symfony/.env
