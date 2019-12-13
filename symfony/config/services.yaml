@@ -4,7 +4,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    rabbitmq_host: 'x.x.x.x'
+    rabbitmq_host: '%env(string:LOCAL_IP)%'
     rabbitmq_user: 'cars'
     rabbitmq_password: 'cars'
     rabbitmq_statuslayer_vhost: '/'
@@ -37,6 +37,10 @@ services:
     App\Infrastructure\Service\UploaderHelper:
         arguments:
             - '%env(PHOTOS_PATH)%'
+
+    App\Infrastructure\Elasticsearch\LoggerElastic:
+        arguments:
+            - '%env(string:LOCAL_IP)%'
 
     App\Application\Command\Handler\:
         resource: '../src/Application/Command/Handler'

@@ -117,6 +117,9 @@
             "config/packages/dev/easy_log_handler.yaml"
         ]
     },
+    "elasticsearch/elasticsearch": {
+        "version": "v6.7.2"
+    },
     "fabpot/goutte": {
         "version": "v3.2.3"
     },
@@ -134,6 +137,12 @@
     },
     "guzzlehttp/psr7": {
         "version": "1.6.1"
+    },
+    "guzzlehttp/ringphp": {
+        "version": "1.1.1"
+    },
+    "guzzlehttp/streams": {
+        "version": "3.0.0"
     },
     "imbo/behat-api-extension": {
         "version": "v2.2.1"
@@ -237,6 +246,12 @@
     },
     "ramsey/uuid": {
         "version": "3.8.0"
+    },
+    "react/promise": {
+        "version": "v2.7.1"
+    },
+    "ruflin/elastica": {
+        "version": "6.1.1"
     },
     "sebastian/code-unit-reverse-lookup": {
         "version": "1.0.1"

@@ -16,6 +16,8 @@ install dependencies:
 
 index elasticsearch request (made in kibana console):
 ```
+ PUT logs
+ 
  PUT cars
  {
      "settings" : {
@@ -247,9 +249,14 @@ POST cars/_doc/
 }
 ```
 
-put your local IP in ./cars-hex/symfony/config/services.yaml:
+put your local IP in ./cars-hex/symfony/behat.yml:
 ```
-rabbitmq_host: 'x.x.x.x'
+base_uri: 'x.x.x.x'
+```
+
+put your local IP in ./cars-hex/symfony/.env:
+```
+LOCAL_IP='x.x.x.x'
 ```
 
 ### Start application
