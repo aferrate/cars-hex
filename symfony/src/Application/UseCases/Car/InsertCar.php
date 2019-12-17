@@ -14,17 +14,20 @@ class InsertCar
     private $carRepository;
     private $photoManager;
     private $publisher;
+    private $carBackupRepository;
 
     /**
      * InsertCar constructor.
      */
     public function __construct(
         CarRepositoryInterface $carRepository,
+        CarRepositoryInterface $carBackupRepository,
         PhotoManager $photoManager,
         DomainEventPublisher $publisher
     )
     {
         $this->carRepository = $carRepository;
+        $this->carBackupRepository = $carBackupRepository;
         $this->photoManager = $photoManager;
         $this->publisher = $publisher;
     }
@@ -39,6 +42,7 @@ class InsertCar
         $car->setSlug($car->getMark().'-'.$car->getModel().'-'.$car->getYear());
 
         $this->carRepository->save($car);
+        $this->carBackupRepository->save($car);
 
         Car::create($car);
 

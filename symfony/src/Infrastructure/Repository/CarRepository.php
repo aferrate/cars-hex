@@ -7,6 +7,7 @@ use App\Domain\Model\Car;
 use App\Domain\Model\CarRepositoryInterface;
 use Doctrine\ORM\AbstractQuery;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Infrastructure\Doctrine\TranslateFilterDoctrine;
 
 class CarRepository implements CarRepositoryInterface
 {
@@ -98,5 +99,10 @@ class CarRepository implements CarRepositoryInterface
     public function findOneByModel($model)
     {
         return $this->entityManager->getRepository(Car::class)->findOneBy(['model' => $model]);
+    }
+
+    public function translateFilter(string $field)
+    {
+        return TranslateFilterDoctrine::translateFilter($field);
     }
 }

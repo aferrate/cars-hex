@@ -38,6 +38,11 @@ services:
         arguments:
             - '%env(PHOTOS_PATH)%'
 
+    App\Infrastructure\Repository\CarElasticRepository:
+        arguments:
+            - '%env(LOCAL_IP)%'
+            - '%env(PORT_ELASTIC)%'
+
     App\Infrastructure\Elasticsearch\LoggerElastic:
         arguments:
             - '%env(string:LOCAL_IP)%'
@@ -55,6 +60,43 @@ services:
 
     App\Infrastructure\Event\SymfonyDomainEventPublisher:
         arguments: ['@old_sound_rabbit_mq.logging_producer']
+
+    App\Application\UseCases\Car\InsertCar:
+        arguments:
+            - '@App\Infrastructure\Repository\CarRepository'
+            - '@App\Infrastructure\Repository\CarElasticRepository'
+            - '@App\Infrastructure\Service\UploaderHelper'
+            - '@App\Infrastructure\Event\SymfonyDomainEventPublisher'
+
+    App\Application\UseCases\Car\DeleteCar:
+        arguments:
+            - '@App\Infrastructure\Repository\CarRepository'
+            - '@App\Infrastructure\Repository\CarElasticRepository'
+            - '@App\Infrastructure\Service\UploaderHelper'
+            - '@App\Infrastructure\Event\SymfonyDomainEventPublisher'
+
+    App\Application\UseCases\Car\UpdateCar:
+        arguments:
+            - '@App\Infrastructure\Repository\CarRepository'
+            - '@App\Infrastructure\Repository\CarElasticRepository'
+            - '@App\Infrastructure\Service\UploaderHelper'
+            - '@App\Infrastructure\Event\SymfonyDomainEventPublisher'
+
+    App\Application\UseCases\Car\GetCarInfo:
+        arguments:
+            - '@App\Infrastructure\Repository\CarElasticRepository'
+
+    App\Application\UseCases\Car\ListAllCars:
+        arguments:
+            - '@App\Infrastructure\Repository\CarElasticRepository'
+
+    App\Application\UseCases\Car\ListAllCarsEnabled:
+        arguments:
+            - '@App\Infrastructure\Repository\CarElasticRepository'
+
+    App\Application\UseCases\Car\ListCarsFiltered:
+        arguments:
+            - '@App\Infrastructure\Repository\CarElasticRepository'
 
 imports:
     - { resource: packages/old_sound_rabbit_mq.yaml }

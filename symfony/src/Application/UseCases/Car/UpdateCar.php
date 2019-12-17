@@ -21,11 +21,13 @@ class UpdateCar
      */
     public function __construct(
         CarRepositoryInterface $carRepository,
+        CarRepositoryInterface $carBackupRepository,
         PhotoManager $photoManager,
         DomainEventPublisher $publisher
     )
     {
         $this->carRepository = $carRepository;
+        $this->carBackupRepository = $carBackupRepository;
         $this->photoManager = $photoManager;
         $this->publisher = $publisher;
     }
@@ -48,6 +50,7 @@ class UpdateCar
         $car->setUpdatedAt(new DateTime('NOW'));
 
         $this->carRepository->save($car);
+        $this->carBackupRepository->save($car);
 
         Car::update($car);
 

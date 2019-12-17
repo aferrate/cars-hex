@@ -19,11 +19,13 @@ class DeleteCar
      */
     public function __construct(
         CarRepositoryInterface $carRepository,
+        CarRepositoryInterface $carBackupRepository,
         PhotoManager $photoManager,
         DomainEventPublisher $publisher
     )
     {
         $this->carRepository = $carRepository;
+        $this->carBackupRepository = $carBackupRepository;
         $this->photoManager = $photoManager;
         $this->publisher = $publisher;
     }
@@ -46,6 +48,7 @@ class DeleteCar
         $this->publisher->publishRecorded($car->pullDomainEvents());
 
         $this->carRepository->delete($car);
+        $this->carBackupRepository->delete($car);
 
         return true;
     }

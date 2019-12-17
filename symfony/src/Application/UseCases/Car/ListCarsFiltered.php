@@ -23,27 +23,7 @@ class ListCarsFiltered
      */
     public function getCarsFiltered($query): array
     {
-        $filters = [];
-
-        switch ($query->getField()) {
-            case 'mark':
-                if($query->getSearch() !== '') {
-                    $filters[] = 'mark LIKE \'%' . $query->getSearch() . '%\'';
-                }
-                break;
-            case 'model':
-                if($query->getSearch() !== '') {
-                    $filters[] = 'model LIKE \'%' . $query->getSearch() . '%\'';
-                }
-                break;
-            case 'year':
-                if($query->getSearch() !== '') {
-                    $filters[] = 'year ='. $query->getSearch() .'';
-                }
-                break;
-        }
-
-        $criteria = new Criteria($filters, 'DESC');
+        $criteria = new Criteria($this->carRepository->translateFilter($query->getField()), 'DESC');
 
         return $this->carRepository->searchByCriteria($criteria);
     }
