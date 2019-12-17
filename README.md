@@ -19,6 +19,57 @@ index elasticsearch request (made in kibana console) (already inserted, but just
  PUT logs
  
  PUT cars
+ {
+     "settings" : {
+         "number_of_shards" : 1
+     },
+     "mappings" : {
+         "_doc" : {
+           "properties":{
+              "id":{
+                 "type":"integer"
+              },
+              "mark":{
+                 "type":"keyword",
+                 "index": "true"
+              },
+              "model":{
+                 "type":"keyword",
+                 "index": "true"
+              },
+              "year":{
+                 "type":"integer"
+              },
+              "description":{
+                 "type":"text"
+              },
+              "slug":{
+                 "type":"text"
+              },
+              "enabled":{
+                 "type":"boolean"
+              },
+              "created_at":{
+                 "type":"date",
+                 "format":"yyyy-MM-dd HH:mm:ss"
+              },
+              "updated_at":{
+                 "type":"date",
+                 "format":"yyyy-MM-dd HH:mm:ss"
+              },
+              "country":{
+                 "type":"text"
+              },
+              "city":{
+                 "type":"text"
+              },
+              "image_filename":{
+                 "type":"text"
+              }
+           }
+         }
+     }
+ }
 ```
 
 elasticsearch cars data (made in kibana console) (already inserted, but just in case):
@@ -31,7 +82,7 @@ POST cars/_doc/
    "year":2000,
    "description":"description 0",
    "slug":"mark-0-model-0-2000",
-   "enabled":false,
+   "enabled":true,
    "created_at":"2019-05-19 22:46:55",
    "updated_at":"2019-05-19 22:46:55",
    "country":null,
@@ -47,7 +98,7 @@ POST cars/_doc/
    "year":2001,
    "description":"description 1",
    "slug":"mark-1-model-1-2001",
-   "enabled":true,
+   "enabled":false,
    "created_at":"2019-05-20 22:46:55",
    "updated_at":"2019-05-20 22:46:55",
    "country":null,

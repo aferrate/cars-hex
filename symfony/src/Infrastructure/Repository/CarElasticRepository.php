@@ -69,9 +69,7 @@ class CarElasticRepository implements CarRepositoryInterface
             'index' => 'cars',
             'body'  => [
                 'query' => [
-                    'match' => [
-                        'slug' => $slug
-                    ]
+                    'match' => ['slug' => $slug]
                 ]
             ]
         ];
@@ -89,9 +87,7 @@ class CarElasticRepository implements CarRepositoryInterface
                 'from' => 0,
                 'size' => 1000,
                 'query' => [
-                    'match' => [
-                        'enabled' => true
-                    ]
+                    'match' => ['enabled' => true]
                 ],
                 'sort' => ['id' => ['order' => 'desc']]
             ]
@@ -142,9 +138,7 @@ class CarElasticRepository implements CarRepositoryInterface
             'index' => 'cars',
             'body'  => [
                 'query' => [
-                    'match' => [
-                        'id' => $id
-                    ]
+                    'match' => ['id' => $id]
                 ]
             ]
         ];
@@ -160,9 +154,7 @@ class CarElasticRepository implements CarRepositoryInterface
             'index' => 'cars',
             'body'  => [
                 'query' => [
-                    'match' => [
-                        'mark' => $mark
-                    ]
+                    'match' => ['mark' => $mark]
                 ]
             ]
         ];
@@ -178,9 +170,7 @@ class CarElasticRepository implements CarRepositoryInterface
             'index' => 'cars',
             'body'  => [
                 'query' => [
-                    'match' => [
-                        'model' => $model
-                    ]
+                    'match' => ['model' => $model]
                 ]
             ]
         ];
@@ -190,8 +180,8 @@ class CarElasticRepository implements CarRepositoryInterface
         return $car;
     }
 
-    public function translateFilter(string $field)
+    public function translateFilter(string $field, string $search)
     {
-        return TranslateFilterElastic::translateFilter($field);
+        return TranslateFilterElastic::translateFilter($field, $search);
     }
 }

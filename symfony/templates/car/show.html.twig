@@ -14,7 +14,6 @@
                     <th>Last update</th>
                     <th>Country</th>
                     <th>City</th>
-                    <th>Enabled</th>
                     <th>Photo</th>
                 </tr>
                 </thead>
@@ -43,9 +42,6 @@
                         </td>
                         <td>
                             {{ car.city }}
-                        </td>
-                        <td>
-                            {{ car.enabled }}
                         </td>
                         <td>
                             {% if car.imageFilename is not empty %}

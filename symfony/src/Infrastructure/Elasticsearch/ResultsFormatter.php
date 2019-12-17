@@ -13,10 +13,6 @@ class ResultsFormatter
         $result = [];
         $x = 0;
 
-        if(empty($elasticResult['hits']['hits'])) {
-            return [new Car()];
-        }
-
         foreach ($elasticResult['hits']['hits'] as $row) {
             $car = new Car();
 

@@ -23,7 +23,8 @@ class ListCarsFiltered
      */
     public function getCarsFiltered($query): array
     {
-        $criteria = new Criteria($this->carRepository->translateFilter($query->getField()), 'DESC');
+        $criteria = new Criteria($this->carRepository->translateFilter(
+            $query->getField(), $query->getSearch()), 'DESC');
 
         return $this->carRepository->searchByCriteria($criteria);
     }
