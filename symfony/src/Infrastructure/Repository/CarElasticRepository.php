@@ -24,43 +24,20 @@ class CarElasticRepository implements CarRepositoryInterface
 
     public function save(Car $car): void
     {
-        $params = [
-            'index' => 'cars',
-            'type' => '_doc',
-            'body' => [
-                'id' => $car->getId(),
-                'mark' => $car->getMark(),
-                'model' => $car->getModel(),
-                'year' => $car->getYear(),
-                'description' => $car->getDescription(),
-                'slug' => $car->getSlug(),
-                'enabled' => $car->isEnabled(),
-                'created_at' => $car->getCreatedAt()->format('Y-m-d H:i:s'),
-                'updated_at' => $car->getUpdatedAt()->format('Y-m-d H:i:s'),
-                'country' => $car->getCountry(),
-                'city' => $car->getCity(),
-                'image_filename' => $car->getImageFilename()
-            ]
-        ];
+        $existCar = $this->existCar($car->getId());
 
-        $this->client->index($params);
+        ($existCar['exists']) ? $this->update($car, $existCar['docId']) : $this->insert($car);
     }
 
     public function delete(Car $car): void
     {
         $params = [
+            'id'    => $this->existCar($car->getId())['docId'],
             'index' => 'cars',
-            'type' => '_doc',
-            'body' => [
-                'query' => [
-                    'match' => [
-                        ['id' => $car->getId()]
-                    ]
-                ]
-            ]
+            'type'  => '_doc'
         ];
 
-        $this->client->deleteByQuery($params);
+        $this->client->delete($params);
     }
 
     public function getBySlug(string $slug)
@@ -143,7 +120,7 @@ class CarElasticRepository implements CarRepositoryInterface
             ]
         ];
 
-        $car = ResultsFormatter::formatResultsArray($this->client->search($params))[0];
+        $car = $this->client->search($params);
 
         return $car;
     }
@@ -183,5 +160,67 @@ class CarElasticRepository implements CarRepositoryInterface
     public function translateFilter(string $field, string $search)
     {
         return TranslateFilterElastic::translateFilter($field, $search);
+    }
+
+    public function existCar($id): array
+    {
+        $carExists = $this->findOneById($id);
+
+        if($carExists['hits']['total'] == 0) {
+            return ['exists' => false, 'docId' => null];
+        }
+
+        return ['exists' => true, 'docId' => $carExists['hits']['hits'][0]['_id']];
+    }
+
+    public function update(Car $car, string $docId)
+    {
+        $params = [
+            'index' => 'cars',
+            'type' => '_doc',
+            'id' => $docId,
+            'body' => [
+                'doc' => [
+                    'id' => $car->getId(),
+                    'mark' => $car->getMark(),
+                    'model' => $car->getModel(),
+                    'year' => $car->getYear(),
+                    'description' => $car->getDescription(),
+                    'slug' => $car->getSlug(),
+                    'enabled' => $car->isEnabled(),
+                    'created_at' => $car->getCreatedAt()->format('Y-m-d H:i:s'),
+                    'updated_at' => $car->getUpdatedAt()->format('Y-m-d H:i:s'),
+                    'country' => $car->getCountry(),
+                    'city' => $car->getCity(),
+                    'image_filename' => $car->getImageFilename()
+                ]
+            ]
+        ];
+
+        $this->client->update($params);
+    }
+
+    public function insert(Car $car)
+    {
+        $params = [
+            'index' => 'cars',
+            'type' => '_doc',
+            'body' => [
+                'id' => $car->getId(),
+                'mark' => $car->getMark(),
+                'model' => $car->getModel(),
+                'year' => $car->getYear(),
+                'description' => $car->getDescription(),
+                'slug' => $car->getSlug(),
+                'enabled' => $car->isEnabled(),
+                'created_at' => $car->getCreatedAt()->format('Y-m-d H:i:s'),
+                'updated_at' => $car->getUpdatedAt()->format('Y-m-d H:i:s'),
+                'country' => $car->getCountry(),
+                'city' => $car->getCity(),
+                'image_filename' => $car->getImageFilename()
+            ]
+        ];
+
+        $this->client->index($params);
     }
 }

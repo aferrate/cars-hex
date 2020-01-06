@@ -31,8 +31,8 @@ CREATE TABLE `car` (
 
 INSERT INTO `car` (`id`, `mark`, `model`, `year`, `description`, `slug`, `enabled`, `created_at`, `updated_at`, `country`, `city`, `image_filename`) VALUES
 (1, 'mark 0', 'model 0', 2000, 'description 0', 'mark-0-model-0-2000', 1, '2019-05-19 22:46:55', '2019-05-19 22:46:55', NULL, NULL, NULL),
-(2, 'mark 1', 'model 1', 2001, 'description 1', 'mark-1-model-1-2001', 0, '2019-05-20 22:46:55', '2019-05-20 22:46:55', NULL, NULL, NULL),
-(3, 'mark 2', 'model 2', 2002, 'description 2', 'mark-2-model-2-2002', 1, '2019-05-21 22:46:55', '2019-05-21 22:46:55', NULL, NULL, NULL),
+(2, 'mark 1', 'model 1', 2001, 'description 1', 'mark-1-model-1-2001', 1, '2019-05-20 22:46:55', '2019-05-20 22:46:55', NULL, NULL, NULL),
+(3, 'mark 2', 'model 2', 2002, 'description 2', 'mark-2-model-2-2002', 0, '2019-05-21 22:46:55', '2019-05-21 22:46:55', NULL, NULL, NULL),
 (4, 'mark 3', 'model 3', 2003, 'description 3', 'mark-3-model-3-2003', 1, '2019-05-22 22:46:55', '2019-05-22 22:46:55', NULL, NULL, NULL),
 (5, 'mark 4', 'model 4', 2004, 'description 4', 'mark-4-model-4-2004', 1, '2019-05-23 22:46:55', '2019-05-23 22:46:55', NULL, NULL, NULL),
 (6, 'mark 5', 'model 5', 2005, 'description 5', 'mark-5-model-5-2005', 1, '2019-05-24 22:46:55', '2019-05-24 22:46:55', NULL, NULL, NULL),

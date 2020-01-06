@@ -4,7 +4,6 @@ namespace App\Infrastructure\Elasticsearch;
 
 use App\Domain\Model\Car;
 use DateTime;
-use DateTimeImmutable;
 
 class ResultsFormatter
 {
@@ -24,7 +23,7 @@ class ResultsFormatter
             $car->setSlug($row['_source']['slug']);
             $car->setEnabled($row['_source']['enabled']);
             $car->setCreatedAt(
-                DateTimeImmutable::createFromFormat(
+                DateTime::createFromFormat(
                     'Y-m-d H:i:s', $row['_source']['created_at']));
             $car->setUpdatedAt(
                 DateTime::createFromFormat(

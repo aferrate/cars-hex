@@ -6,7 +6,6 @@ use App\Domain\Model\CarRepositoryInterface;
 use App\Domain\Photo\PhotoManager;
 use App\Domain\Model\Car;
 use DateTime;
-use DateTimeImmutable;
 use App\Domain\Event\DomainEventPublisher;
 
 class InsertCar
@@ -37,7 +36,7 @@ class InsertCar
      */
     public function insert($car): bool
     {
-        $car->setCreatedAt(new DateTimeImmutable('NOW'));
+        $car->setCreatedAt(new DateTime('NOW'));
         $car->setUpdatedAt(new DateTime('NOW'));
         $car->setSlug($car->getMark().'-'.$car->getModel().'-'.$car->getYear());
 

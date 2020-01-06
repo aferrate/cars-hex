@@ -47,8 +47,8 @@ class DeleteCar
 
         $this->publisher->publishRecorded($car->pullDomainEvents());
 
-        $this->carRepository->delete($car);
         $this->carBackupRepository->delete($car);
+        $this->carRepository->delete($car);
 
         return true;
     }

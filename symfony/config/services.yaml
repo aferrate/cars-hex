@@ -84,18 +84,27 @@ services:
 
     App\Application\UseCases\Car\GetCarInfo:
         arguments:
-            - '@App\Infrastructure\Repository\CarElasticRepository'
+            - '%env(REPO_DATA)%'
+            - '@App\Infrastructure\Factory\CarRepoFactory'
 
     App\Application\UseCases\Car\ListAllCars:
         arguments:
-            - '@App\Infrastructure\Repository\CarElasticRepository'
+            - '%env(REPO_DATA)%'
+            - '@App\Infrastructure\Factory\CarRepoFactory'
 
     App\Application\UseCases\Car\ListAllCarsEnabled:
         arguments:
-            - '@App\Infrastructure\Repository\CarElasticRepository'
+            - '%env(REPO_DATA)%'
+            - '@App\Infrastructure\Factory\CarRepoFactory'
 
     App\Application\UseCases\Car\ListCarsFiltered:
         arguments:
+            - '%env(REPO_DATA)%'
+            - '@App\Infrastructure\Factory\CarRepoFactory'
+
+    App\Infrastructure\Factory\CarRepoFactory:
+        arguments:
+            - '@App\Infrastructure\Repository\CarRepository'
             - '@App\Infrastructure\Repository\CarElasticRepository'
 
 imports:

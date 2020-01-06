@@ -6,7 +6,6 @@ use App\Domain\Aggregate\AggregateRoot;
 use App\Domain\Event\CarCreated;
 use App\Domain\Event\CarUpdated;
 use App\Domain\Event\CarDeleted;
-use DateTimeImmutable;
 use DateTime;
 
 final class Car extends AggregateRoot
@@ -104,9 +103,9 @@ final class Car extends AggregateRoot
     }
 
     /**
-     * @return DateTimeImmutable
+     * @return DateTime
      */
-    public function getCreatedAt(): DateTimeImmutable
+    public function getCreatedAt(): DateTime
     {
         return $this->createdAt;
     }
@@ -202,9 +201,9 @@ final class Car extends AggregateRoot
     }
 
     /**
-     * @param DateTimeImmutable $createdAt
+     * @param DateTime $createdAt
      */
-    public function setCreatedAt(DateTimeImmutable $createdAt): void
+    public function setCreatedAt(DateTime $createdAt): void
     {
         $this->createdAt = $createdAt;
     }

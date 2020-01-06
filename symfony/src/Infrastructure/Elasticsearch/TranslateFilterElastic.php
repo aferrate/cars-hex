@@ -10,7 +10,7 @@ class TranslateFilterElastic
 
         switch ($field) {
             case 'mark':
-                if($field !== '') {
+                if($search !== '') {
                     $filter = [
                         'bool' => [
                             'must' => [
@@ -22,7 +22,7 @@ class TranslateFilterElastic
                 }
                 break;
             case 'model':
-                if($field !== '') {
+                if($search !== '') {
                     $filter = [
                         'bool' => [
                             'must' => [
@@ -34,7 +34,7 @@ class TranslateFilterElastic
                 }
                 break;
             case 'year':
-                if($field !== '') {
+                if($search !== '') {
                     $filter = [
                         'bool' => [
                             'must' => [

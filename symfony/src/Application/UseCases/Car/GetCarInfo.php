@@ -3,7 +3,7 @@
 namespace App\Application\UseCases\Car;
 
 use App\Domain\Model\Car;
-use App\Domain\Model\CarRepositoryInterface;
+use App\Infrastructure\Factory\CarRepoFactory;
 
 class GetCarInfo
 {
@@ -13,9 +13,9 @@ class GetCarInfo
      * GetCarInfo constructor.
      * @param $carRepository
      */
-    public function __construct(CarRepositoryInterface $carRepository)
+    public function __construct(string $carRepoData, CarRepoFactory $carRepoFactory)
     {
-        $this->carRepository = $carRepository;
+        $this->carRepository = $carRepoFactory->createCarRepo($carRepoData);
     }
 
     /**
